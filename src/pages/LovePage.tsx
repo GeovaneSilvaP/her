@@ -41,8 +41,8 @@ const fotocard = "/fotos%20e%20m%C3%BAsica/fotos/fotocard.jpeg";
 
 function LovePage() {
   return (
-    <main className="min-h-screen overflow-x-clip bg-rose-950 text-rose-100">
-      <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-16 px-4 py-12 sm:gap-20 sm:px-6 sm:py-16 md:gap-24 md:px-8 md:py-20">
+    <main className="min-h-screen min-h-[100dvh] w-full overflow-x-clip bg-rose-950 text-rose-100">
+      <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-14 px-4 py-10 sm:gap-20 sm:px-8 sm:py-16 md:gap-24 md:px-10 md:py-20 lg:px-12">
         {/* Apresentação */}
         <motion.section
           initial={{ opacity: 0, y: 30 }}
@@ -56,15 +56,15 @@ function LovePage() {
           >
             <Heart
               aria-hidden="true"
-              className="h-10 w-10 fill-rose-500 text-rose-500 sm:h-12 sm:w-12"
+              className="h-10 w-10 fill-rose-500 text-rose-500 sm:h-12 sm:w-12 md:h-14 md:w-14"
             />
           </motion.div>
 
-          <h1 className="text-3xl font-bold leading-tight text-rose-200 sm:text-4xl md:text-5xl">
+          <h1 className="text-balance break-words text-3xl font-bold leading-tight text-rose-200 sm:text-5xl md:text-6xl">
             Minha querida Alrielle ❤️
           </h1>
 
-          <p className="max-w-3xl text-base leading-7 text-rose-100/90 sm:text-lg sm:leading-8 md:text-xl">
+          <p className="max-w-3xl text-pretty text-base leading-7 text-rose-100/90 sm:text-lg sm:leading-8 md:text-xl md:leading-9">
             Desde que você entrou na minha vida, os dias ficaram mais bonitos e
             fáceis de viver. Eu adoro o seu sorriso, a paz que você me traz e o
             jeito único que você tem de transformar qualquer momento simples em
@@ -80,10 +80,10 @@ function LovePage() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="h-auto max-h-[40svh] w-auto max-w-full object-contain sm:max-h-[45svh]"
+            className="h-auto max-h-[40svh] w-auto max-w-full object-contain sm:max-h-[45svh] md:max-h-[50svh]"
           />
 
-          <p className="text-sm italic text-rose-300 sm:text-base">
+          <p className="text-sm italic text-rose-300 sm:text-base md:text-lg">
             Você deixa meus dias mais felizes. ❤️
           </p>
         </motion.section>
@@ -92,39 +92,36 @@ function LovePage() {
         <motion.section
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.15 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.8 }}
           className="flex w-full flex-col items-center gap-5 sm:gap-7"
         >
           <div className="text-center">
-            <h2 className="text-2xl font-bold text-rose-200 sm:text-4xl md:text-5xl">
+            <h2 className="text-balance text-2xl font-bold text-rose-200 sm:text-4xl md:text-5xl">
               Nossas lembranças ❤️
             </h2>
 
-            <p className="mt-3 text-sm text-rose-300 sm:text-base">
+            <p className="mt-3 text-sm text-rose-300 sm:text-base md:text-lg">
               Pequenos momentos que guardam grandes sentimentos.
             </p>
           </div>
 
-          <motion.div
-            whileHover={{ scale: 1.01 }}
-            transition={{ duration: 0.3 }}
-            className="w-full overflow-hidden rounded-2xl border border-rose-800 bg-rose-900/30 shadow-2xl shadow-black/30 sm:rounded-3xl"
-          >
+          {/* Sem "scale" no hover: em celular/tablet o hover gruda após o toque */}
+          <div className="w-full max-w-3xl overflow-hidden rounded-2xl border border-rose-800 bg-rose-900/30 shadow-2xl shadow-black/30 sm:rounded-3xl">
             <img
               src={fotocard}
               alt="Uma montagem especial com nossas fotos"
               loading="lazy"
               className="block h-auto w-full object-contain"
             />
-          </motion.div>
+          </div>
         </motion.section>
 
         {/* Mensagem de amor */}
         <motion.section
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.15 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.8 }}
           className="flex w-full flex-col items-center gap-5 text-center sm:gap-7"
         >
@@ -134,15 +131,15 @@ function LovePage() {
           >
             <Heart
               aria-hidden="true"
-              className="h-10 w-10 fill-red-600 text-red-600 sm:h-12 sm:w-12"
+              className="h-10 w-10 fill-red-600 text-red-600 sm:h-12 sm:w-12 md:h-14 md:w-14"
             />
           </motion.div>
 
-          <h2 className="text-2xl font-bold text-rose-200 sm:text-4xl md:text-5xl">
+          <h2 className="text-balance text-2xl font-bold text-rose-200 sm:text-4xl md:text-5xl">
             Você é a melhor ❤️
           </h2>
 
-          <p className="max-w-3xl text-base leading-7 text-rose-100/90 sm:text-lg sm:leading-8 md:text-xl">
+          <p className="max-w-3xl text-pretty text-base leading-7 text-rose-100/90 sm:text-lg sm:leading-8 md:text-xl md:leading-9">
             Eu nunca me cansaria de te olhar e te dizer que tudo dentro de mim
             ama tudo que vem de você. Teu toque, teu abraço, teu cheiro são a
             esperança de um lugar de segurança, onde eu e você podemos sempre
@@ -157,7 +154,7 @@ function LovePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="h-auto max-h-[40svh] w-auto max-w-full object-contain sm:max-h-[45svh]"
+            className="h-auto max-h-[40svh] w-auto max-w-full object-contain sm:max-h-[45svh] md:max-h-[50svh]"
           />
 
           <p className="max-w-xl pt-2 text-base italic leading-relaxed text-rose-300 sm:text-lg md:text-xl">
@@ -174,7 +171,7 @@ function LovePage() {
         transition={{ duration: 0.8 }}
         className="flex w-full flex-col items-center gap-4 overflow-hidden pb-12 sm:pb-16 md:pb-20"
       >
-        <div className="px-4 text-center">
+        <div className="px-4 text-center sm:px-8">
           <motion.div
             animate={{ scale: [1, 1.1, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
@@ -186,11 +183,11 @@ function LovePage() {
             />
           </motion.div>
 
-          <h2 className="text-2xl font-bold text-rose-200 sm:text-4xl md:text-5xl">
+          <h2 className="text-balance text-2xl font-bold text-rose-200 sm:text-4xl md:text-5xl">
             Momentos juntos...
           </h2>
 
-          <p className="mx-auto mt-3 max-w-lg text-sm leading-6 text-rose-300 sm:text-base sm:leading-7">
+          <p className="mx-auto mt-3 max-w-lg text-pretty text-sm leading-6 text-rose-300 sm:text-base sm:leading-7 md:text-lg">
             Cada foto guarda um pedacinho da nossa história e cada lembrança me
             faz agradecer por ter você ao meu lado. ❤️
           </p>
@@ -200,13 +197,13 @@ function LovePage() {
           <InfiniteCarousel photos={fotos} />
         </div>
 
-        <p className="px-4 pt-2 text-center text-xs italic text-rose-400 sm:text-sm">
+        <p className="px-4 pt-2 text-center text-xs italic text-rose-400 sm:text-sm md:text-base">
           E que a gente ainda tenha muitas lembranças para criar juntos...
         </p>
       </motion.section>
 
       {/* Encerramento */}
-      <footer className="border-t border-rose-800/60 px-4 py-8 text-center sm:py-10">
+      <footer className="border-t border-rose-800/60 px-4 py-8 pb-[max(2rem,env(safe-area-inset-bottom))] text-center sm:py-10">
         <Heart
           aria-hidden="true"
           className="mx-auto mb-3 h-6 w-6 fill-rose-600 text-rose-600"
